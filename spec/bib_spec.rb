@@ -7,11 +7,11 @@ describe Libro do
     end
        
     it "Es una la instancia de Libro" do
-       (@l.instance_of?Libro).should eq(true)
+       expect(@l.instance_of?Libro).to eq(true)
     end
     
     it "Debe responder a un metodo de su clase padre" do
-        @l.respond_to?(:autor).should eq(true)
+        expect(@l.respond_to?(:autor)).to eq(true)
     end
 end
 
@@ -21,11 +21,11 @@ describe Revista do
     end
     
     it "Es una instancia de Revista" do
-       (@r.instance_of?Revista).should eq(true)
+       expect((@r.instance_of?Revista)).to eq(true)
     end
     
     it "Debe responder a un metodo de su clase padre" do
-        @r.respond_to?(:autor).should eq(true)
+        expect(@r.respond_to?(:autor)).to eq(true)
     end
 end
 
@@ -35,11 +35,11 @@ describe Periodico do
     end
 
     it "Es una instancia de Periodico" do
-       (@p.instance_of?Periodico).should eq(true)
+       expect((@p.instance_of?Periodico)).to eq(true)
     end
 
     it "Debe responder a un metodo de su clase padre" do
-        @p.respond_to?(:autor).should eq(true)
+       expect(@p.respond_to?(:autor)).to eq(true)
     end
 end
 
@@ -49,7 +49,7 @@ describe Electronico do
     end
 
     it "Es una instancia de Electronico" do
-       expect(@e.instance_of?Electronico).to eq(true)
+        expect((@e.instance_of?Electronico)).to eq(true)
     end
 
     it "Debe responder a un metodo de su clase padre" do
@@ -63,7 +63,7 @@ describe LinkedList do
     end
     
     it "Al inicializar la lista, el inicio es nulo" do
-            expect(@L.head).to eq(nil)
+             expect(@L.head).to eq(nil)
     end
     
     it "Al inicializar la lista, el final es nulo" do
